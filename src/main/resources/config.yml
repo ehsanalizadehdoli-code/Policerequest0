@@ -1,0 +1,63 @@
+# PoliceRequest Configuration (ساخته‌شده به سبک پلاگین مدیک و تاکسی)
+
+tracking:
+  # هر چند تیک قطب‌نما آپدیت شود (۲۰ تیک = ۱ ثانیه). تغییرش نیاز به ریستارت دارد.
+  update-interval: 10
+  # فاصله (بلاک) برای تمام شدن درخواست
+  completion-distance: 2.0
+  # نمایش فاصله در ActionBar
+  show-actionbar: true
+
+compass:
+  # برای قبول کردن، دقیقاً یک قطب‌نما در اینونتوری لازم است
+  require-single-compass: true
+  # اگر قطب‌نما دراپ شود ردیابی لغو شود
+  cancel-on-drop: true
+  # اگر افسر بمیرد ردیابی لغو شود
+  cancel-on-death: true
+
+request:
+  # هر بازیکن فقط یک درخواست فعال داشته باشد
+  one-request-per-player: true
+  # به همه افسرها (پرمیشن police.accept) خبر داده شود
+  notify-officers: true
+  # زمان انقضای درخواست به ثانیه (۰ = بدون انقضا)
+  request-timeout: 0
+  # فاصله بین دو درخواست به ثانیه (۰ = بدون محدودیت)
+  cooldown: 60
+
+world:
+  show-different-world-warning: true
+
+sounds:
+  enabled: true
+  request-created: "ENTITY_EXPERIENCE_ORB_PICKUP"
+  request-accepted: "ENTITY_PLAYER_LEVELUP"
+  arrival: "UI_TOAST_CHALLENGE_COMPLETE"
+
+messages:
+  prefix: "&8[&9Police&8]&r "
+  no-permission: "&cاجازه استفاده از این دستور را نداری"
+  player-only: "&cفقط بازیکن‌ها می‌توانند از این دستور استفاده کنند"
+  invalid-usage: "&cاستفاده: /police یا /police accept <بازیکن>"
+  sent: "&aدرخواست پلیس با موفقیت ارسال شد"
+  already-active: "&cتو همین الان یک درخواست پلیس فعال داری"
+  cooldown: "&cباید {time} ثانیه صبر کنی تا دوباره درخواست بدهی"
+  expired: "&cدرخواست پلیس تو منقضی شد"
+  notification: "&e{player} &7درخواست پلیس داده است"
+  accept-instruction: "&7برای پاسخ: &e/police accept {player} &7(کلیک کن)"
+  accepted: "&aتو الان در حال ردیابی &e{player} &aهستی"
+  compass-guide: "&7قطب‌نمایت تو را به او راهنمایی می‌کند"
+  officer-notified: "&a{officer} &7در راه است تا به تو کمک کند"
+  already-busy: "&cتو همین الان مشغول یک مأموریت هستی"
+  player-not-found: "&cبازیکن پیدا نشد یا آفلاین است"
+  compass-required: "&cباید دقیقاً یک قطب‌نما در اینونتوری داشته باشی"
+  not-available: "&cاین درخواست دیگر موجود نیست"
+  bind-failed: "&cمتصل کردن قطب‌نما انجام نشد"
+  actionbar: "&e{player} &7- &f{distance}m"
+  different-world: "&c{player} - دنیای دیگر"
+  arrived: "&aبه &e{player} &aرسیدی"
+  officer-arrived: "&a{officer} &7به تو رسید"
+  target-unavailable: "&cبازیکن هدف دیگر در دسترس نیست"
+  cancelled: "&cردیابی قطب‌نما لغو شد"
+  reloaded: "&aتنظیمات دوباره بارگذاری شد"

@@ -1,0 +1,26 @@
+name: PoliceRequest
+version: 1.0.0
+main: policerequest.PoliceRequestPlugin
+api-version: '1.20'
+description: Police request system with compass tracking (same style as the Medic/Taxi plugin)
+
+commands:
+  police:
+    description: Request police or accept requests
+    usage: /police [accept <player>]
+    permission: police.use
+  policereload:
+    description: Reload plugin configuration
+    usage: /policereload
+    permission: police.reload
+
+permissions:
+  police.use:
+    description: Allows sending police requests
+    default: true
+  police.accept:
+    description: Allows accepting police requests (officers)
+    default: op
+  police.reload:
+    description: Allows reloading plugin configuration
+    default: op
